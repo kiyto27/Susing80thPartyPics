@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Susing 80th Birthday Photobooth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- barra fissa che appare allo scroll -->
+  <div class="topbar" id="topbar">
+    <span class="topbar-title">Susing&rsquo;s 80th &middot; Photobooth</span>
+    <button class="topbar-up" id="topUp" aria-label="Torna su">&#8593;</button>
+  </div>
+
+  <header class="hero">
+    <span class="hero-num" aria-hidden="true">80</span>
+    <div class="hero-inner">
+      <p class="kicker"><span></span>Ottant&rsquo;anni di Susing<span></span></p>
+      <h1 class="title"><span class="l1">Susing&rsquo;s</span> <span class="l2"><em>80th</em></span> <span class="l3">Birthday</span></h1>
+      <p class="subtitle">Una raccolta dei momenti pi&ugrave; belli della festa. Tocca una foto per vederla in grande, scaricarla o condividerla con chi vuoi.</p>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"><span>Le foto</span><i></i></div>
+  </header>
+
+  <main class="gallery" id="gallery" aria-label="Galleria fotografica"></main>
+
+  <footer class="footer">
+    <div class="footer-mark">&#10022;</div>
+    Realizzato con affetto per gli 80 anni di Susing
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ingrandita">
+    <button class="lb-btn lb-close" id="lbClose" aria-label="Chiudi">&times;</button>
+    <button class="lb-btn lb-prev"  id="lbPrev"  aria-label="Precedente">&#8249;</button>
+    <button class="lb-btn lb-next"  id="lbNext"  aria-label="Successiva">&#8250;</button>
+
+    <figure class="lb-figure">
+      <img id="lbImage" src="" alt="">
+      <figcaption class="lb-caption">
+        <span id="lbText"></span>
+        <span class="lb-counter" id="lbCounter">1 / 1</span>
+      </figcaption>
+    </figure>
+
+    <div class="lb-actions">
+      <button class="action" id="lbDownload">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Scarica
+      </button>
+      <button class="action secondary" id="lbShare">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+        Condividi
+      </button>
+    </div>
+
+    <div class="filmstrip" id="filmstrip" aria-label="Anteprime"></div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
