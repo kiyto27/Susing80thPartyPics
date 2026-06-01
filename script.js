@@ -9,7 +9,11 @@
    un segnaposto: appena aggiungi la foto vera, compare da sola.
 ----------------------------------------------------------- */
 const PHOTOS = [
-  { src: "photos/valorant.jpg",  caption: "Valorant" }
+  { src: "photos/1.jpg",  caption: "Valorant" },
+  { src: "photos/2.jpg",  caption: "Valorant" },
+  { src: "photos/3.jpg",  caption: "Valorant" },
+  { src: "photos/4.jpg",  caption: "Valorant" },
+  { src: "photos/5.jpg",  caption: "Valorant" }
 ];
 
 /* Segnaposto eleganti con altezze variabili (per il mosaico). */
